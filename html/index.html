@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="/html/default.js"></script>
+	</head>
+	<body>
+		<h3> Join game </h3>
+		<p> User ID: </p>
+		<input type="text" id="uid" name="uid"></input>
+		<p> Create a session: </p>
+		<button onclick=createSession()>Create Game </button>
+		<p> Join existing session: </p>
+		<input type="text" id="sid" name="sid"></input>
+		<button onclick=onclickJoin()>Join </button>
+	</body>
+	<script>
+		window.onload = function() {
+			var query = window.location.search.substring(1);
+			console.log(query);
+			var vars = query.split('&');
+			for (var i = 0; i < vars.length; i++) {
+				var name = vars[i].split("=")[0];
+				var value = vars[i].split("=")[1];
+				if(name === "sid") {
+					document.getElementById("sid").value = value
+				}
+			}
+			var uri = window.location.toString();
+			var clean_uri = uri.substring(0, uri.indexOf("?"));
+			window.history.replaceState({}, document.title, clean_uri);
+		}
+
+function onclickJoin() {
+	var sid = document.getElementById("sid").value
+	var uid = document.getElementById("uid").value
+	if (!uid) {
+		alert("Must specify a username");
+		return;
+	}
+	joinSession(sid, uid);
+}
+
+function createSession() {
+	var uid = document.getElementById("uid").value
+	if (!uid) {
+		alert("Must specify a username");
+		return;
+	}
+	$.get("/create?deck=0",
+		{},
+		function(data, status) {
+			joinSession(data.sid, uid);
+		});
+
+}
+
+function joinSession(sid, uid) {
+	$.get("/join/"+sid + "/?uid="+uid, 
+		{},
+		function(data, status) {
+			createCookie(sid, data.uid, 1);
+			window.location.href = "/board/" + sid + "/";
+		});
+}
+	</script>
+</html>

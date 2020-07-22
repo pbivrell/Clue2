@@ -1,0 +1,36 @@
+
+
+.card {
+	font-weight: normal;
+	color: black;
+}
+
+.owned {
+	color: red;
+}
+
+.selected-user {
+	color: purple;
+}
+
+.selected {
+	color: green;
+}
+
+.found {
+	color: blue;
+}
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: blue;
+}
+
+.card {
+	flex-basis: content;
+}
+
+.column {
+	color: lightgrey;
+}

@@ -1,0 +1,112 @@
+{
+   "uuid":0,
+   "name":"cluedo",
+   "description":"Clue board from the cluedo set",
+   "cards":[
+      {
+         "uuid":1,
+         "category":"suspect",
+         "value":"Colonel Mustard"
+      },
+      {
+         "uuid":2,
+         "category":"suspect",
+         "value":"Professor Plum"
+      },
+      {
+         "uuid":3,
+         "category":"suspect",
+         "value":"Reverend Green"
+      },
+      {
+         "uuid":4,
+         "category":"suspect",
+         "value":"Mrs Peacock"
+      },
+      {
+         "uuid":5,
+         "category":"suspect",
+         "value":"Miss Scarlett"
+      },
+      {
+         "uuid":6,
+         "category":"suspect",
+         "value":"Mrs White"
+      },
+      {
+         "uuid":7,
+         "category":"weapon",
+         "value":"Dagger"
+      },
+      {
+         "uuid":8,
+         "category":"weapon",
+         "value":"Candlestick"
+      },
+      {
+         "uuid":9,
+         "category":"weapon",
+         "value":"Revolver"
+      },
+      {
+         "uuid":10,
+         "category":"weapon",
+         "value":"Rope"
+      },
+      {
+         "uuid":11,
+         "category":"weapon",
+         "value":"Lead Pipe"
+      },
+      {
+         "uuid":12,
+         "category":"weapon",
+         "value":"Spanner"
+      },
+      {
+         "uuid":13,
+         "category":"room",
+         "value":"Hall"
+      },
+      {
+         "uuid":14,
+         "category":"room",
+         "value":"Lounge"
+      },
+      {
+         "uuid":15,
+         "category":"room",
+         "value":"Dining Room"
+      },
+      {
+         "uuid":16,
+         "category":"room",
+         "value":"Kitchen"
+      },
+      {
+         "uuid":17,
+         "category":"room",
+         "value":"Ballroom"
+      },
+      {
+         "uuid":18,
+         "category":"room",
+         "value":"Conservatory"
+      },
+      {
+         "uuid":19,
+         "category":"room",
+         "value":"Billiard Room"
+      },
+      {
+         "uuid":20,
+         "category":"room",
+         "value":"Library"
+      },
+      {
+         "uuid":21,
+         "category":"room",
+         "value":"Study"
+      }
+   ]
+}

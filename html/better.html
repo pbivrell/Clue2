@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<script src="/html/better.js"></script>
+		<script src="/html/default.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="/html/better.css">
+	</head>
+	<body>
+		<div>
+			<input type="text" id="setup-text"></input>
+			<button id="setup" onclick="setupOnClick()">Setup</button>
+			<button id="own" onclick="inputCardsOnClick()">Own</button>
+			<button id="release" onclick="releaseOnClick()">Release</button>
+			<button id="query" onclick="queryCardsOnClick()">Query</button>
+			<p id="user"></p>
+		</div>
+		<div id="cards"></div>
+		<div class="column">Users</div>
+		<div id="people"></div>
+	</body>
+</html>
